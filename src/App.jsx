@@ -1,8 +1,14 @@
-import "./App.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
+import "./index.css";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 function App() {
-
-  return <div>React bases</div>;
+  return (
+    <div>
+      <NavBarComponent />
+      <ItemListContainer greeting="Bienvenidos a DocTops!" />
+    </div>
+  );
 }
 
 export default App;
