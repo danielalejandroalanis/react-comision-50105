@@ -1,14 +1,14 @@
 import "./App.css";
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent"
-import NavBarComponent from "./components/NavBar/NavBarComponent";
-
+// import NavBarComponent from "./components/NavBar/NavBarComponent";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
+
   return (
-    <div>
-      <NavBarComponent />
+    <MainLayout title="Tienda Daniel">
       <ButtonComponent />
-    </div>
+    </MainLayout>
   );
 }
 
