@@ -29,10 +29,10 @@ const ItemListContainer = ({ productsData }) => {
     });
 
   return (
-    <div>
+    <div style={{ display: "flex", flexWrap: 1, width: "100vw" }}>
       {productsData.map((product) => {
         return (
-          <Card key={product.id} style={{ width: "18rem" }}>
+          <Card key={product.id} style={{ width: "18rem", margin: 20 }}>
             <Card.Img variant="top" src={product.image} />
             <Card.Body>
               <Card.Title>{product.title}</Card.Title>

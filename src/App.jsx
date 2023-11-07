@@ -1,9 +1,10 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import "./index.css";
 
 import { Products } from "./json/ProductData";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 function App() {
   //Event loop --- Todas las tareas tienen distintas prioridades (micro tareas - macro tareas)
