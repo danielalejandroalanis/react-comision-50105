@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import { getAllProducts } from "../services/apiProducts";
+import { getAllProducts } from "../services";
 
 export const useAllProducts = (limit) => {
   const [products, setProducts] = useState([]);

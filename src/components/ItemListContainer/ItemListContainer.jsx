@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card";
 
-const ItemListContainer = ({ products }) => {
+export const ItemListContainer = ({ products }) => {
   return (
     <div style={{ display: "flex", flexWrap: 1, width: "100vw" }}>
       {products.map((product) => {
@@ -17,5 +17,3 @@ const ItemListContainer = ({ products }) => {
     </div>
   );
 };
-
-export default ItemListContainer;
