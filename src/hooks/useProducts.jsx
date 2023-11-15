@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import { getAllProducts } from "../services";
+import { getAllProducts, getSingleProducts } from "../services";
 
 export const useAllProducts = (limit) => {
   const [products, setProducts] = useState([]);
@@ -15,4 +15,21 @@ export const useAllProducts = (limit) => {
   }, []);
 
   return { products, loading, error };
+};
+
+export const useSingleProduct = (id) => {
+  const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    getSingleProducts(id)
+      .then((res) => {
+        setProduct(res.data);
+      })
+      .catch((err) => setError(true))
+      .finally(() => setLoading(false));
+  }, []);
+
+  return { product, loading, error };
 };
