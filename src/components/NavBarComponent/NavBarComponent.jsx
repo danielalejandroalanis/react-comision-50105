@@ -5,18 +5,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidgetComponent from "../CartWidgetComponent/CartWidgetComponent";
 
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { ProductsData } from "../../data/productsData";
 
 const NavBarComponent = () => {
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products/categories")
-      .then((res) => setCategories(res.data))
-      .catch((error) => console.log(error));
-  }, []);
-
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -29,14 +20,14 @@ const NavBarComponent = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
-              {categories.map((category, index) => {
+              {ProductsData.map((product) => {
                 return (
-                  <NavDropdown.Item key={index}>
+                  <NavDropdown.Item key={product.id}>
                     <Link
-                      to={`/category/${category}`}
+                      to={`/category/${product.category}`}
                       style={{ textDecoration: "none", color: "black" }}
                     >
-                      {category}
+                      {product.category}
                     </Link>
                   </NavDropdown.Item>
                 );
