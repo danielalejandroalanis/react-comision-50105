@@ -18,8 +18,12 @@ export const NavBarComponent = () => {
             <Link to="/">Home</Link>
             <Link to="#link">Productos</Link>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Zapatillas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Jeans</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                <Link to={"/category/laptops"}>Laptops</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                <Link to={"/category/smartphones"}>Smartphones</Link>
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <CartWidgetComponent />
