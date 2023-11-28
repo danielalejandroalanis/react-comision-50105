@@ -7,7 +7,7 @@ import { useSingleProduct } from "../hooks/useProducts";
 export const ItemDetailContainer = () => {
   const { productId } = useParams();
 
-  const { product, loading, error } = useSingleProduct(productId);
+  const { product, loading, error } = useSingleProduct('products', productId);
 
   return (
     <Card key={product.id} style={{ width: "18rem", margin: 20 }}>
