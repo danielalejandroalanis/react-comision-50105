@@ -59,6 +59,7 @@ export const useSingleProduct = (collectionName, id) => {
   return { product, loading, error };
 };
 
+//TODO Refactorizar este hook
 export const useProductsByCategory = (categoryId) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
